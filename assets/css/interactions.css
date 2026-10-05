@@ -1,0 +1,463 @@
+/* Shared micro-interactions — do not alter layout/structure */
+
+/* ----- Custom inverted circle cursor ----- */
+@media (hover: hover) and (pointer: fine) {
+  body.has-custom-cursor,
+  body.has-custom-cursor * {
+    cursor: none !important;
+  }
+
+  .cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    border-radius: 50%;
+    background: #fff;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    /* Above loader (200000) so it stays visible during load */
+    z-index: 200010;
+    transform: translate(-50%, -50%);
+    transition: width 0.22s ease, height 0.22s ease, opacity 0.2s ease;
+    opacity: 0;
+    will-change: transform, width, height;
+  }
+
+  body.has-custom-cursor .cursor-dot.is-on {
+    opacity: 1;
+  }
+
+  body.has-custom-cursor .cursor-dot.is-hover {
+    width: 28px;
+    height: 28px;
+  }
+
+  body.has-custom-cursor .cursor-dot.is-down {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Loader is an opaque white veil — difference-blend would hide the dot */
+  body.is-loading,
+  body.is-loading *,
+  body:has([data-loader]),
+  body:has([data-loader]) *,
+  .loader,
+  .loader * {
+    cursor: none !important;
+  }
+
+  body.is-loading .cursor-dot,
+  body:has([data-loader]) .cursor-dot {
+    mix-blend-mode: normal;
+    background: #000;
+    opacity: 1;
+    z-index: 200020;
+  }
+}
+
+/* ----- Top scroll glass (short + ultra soft dissolve) ----- */
+.scroll-glass {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 96px;
+  z-index: 990;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.42) 0%,
+    rgba(255, 255, 255, 0.18) 35%,
+    rgba(255, 255, 255, 0.06) 65%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(10px) saturate(1.1);
+  -webkit-backdrop-filter: blur(10px) saturate(1.1);
+  /* Mask starts fading immediately so no hard rectangle */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.55) 28%,
+    rgba(0, 0, 0, 0.22) 55%,
+    rgba(0, 0, 0, 0.06) 78%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.55) 28%,
+    rgba(0, 0, 0, 0.22) 55%,
+    rgba(0, 0, 0, 0.06) 78%,
+    transparent 100%
+  );
+  transition: opacity 0.5s ease;
+}
+
+.scroll-glass.is-on {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn,
+  .hero__cta,
+  .cta__btn,
+  .research__btn,
+  .curaduria__btn,
+  a.btn {
+    transition: translate 0.22s ease, transform 0.22s ease,
+      background-color 0.22s ease, color 0.22s ease, box-shadow 0.22s ease,
+      border-color 0.22s ease;
+  }
+
+  /* Use `translate` so it composes with centering transforms (e.g. Ver más) */
+  .btn:hover,
+  .hero__cta:hover,
+  .cta__btn:hover,
+  .research__btn:hover,
+  .curaduria__btn:hover {
+    translate: 0 -2px;
+  }
+
+  .btn:active,
+  .hero__cta:active,
+  .cta__btn:active,
+  .research__btn:active,
+  .curaduria__btn:active {
+    translate: 0 0;
+  }
+
+  /* Keep half-overlap centering; only lift slightly */
+  .funciona__btn {
+    transition: transform 0.22s ease, background-color 0.22s ease,
+      color 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  }
+
+  .funciona__btn:hover {
+    transform: translate(-50%, calc(50% - 3px));
+  }
+
+  .funciona__btn:active {
+    transform: translate(-50%, 50%);
+  }
+
+  .card {
+    transition: box-shadow 0.35s ease, transform 0.35s ease;
+  }
+
+  .card--light:hover {
+    box-shadow: -4px 10px 36px rgba(0, 0, 0, 0.18);
+  }
+
+  .projects .card__media img {
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .projects .card:hover .card__media img {
+    transform: scale(1.035);
+  }
+
+  .footer__links a,
+  .nav .brand {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .footer__links a:hover {
+    opacity: 0.55;
+  }
+
+  .nav .brand:hover {
+    opacity: 0.75;
+  }
+
+  /* Scroll reveal */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  [data-reveal].is-inview {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Case-study media hover */
+  .resumen__media,
+  .research__map,
+  .funciona__browser,
+  .diseno__card,
+  .concepto__item,
+  .diseno__shot,
+  .solucion__photo,
+  .wireframe__art,
+  .hifi__art,
+  .cta__monitor,
+  .mercado__house,
+  .plan__phone {
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .resumen__media:hover,
+  .research__map:hover,
+  .funciona__browser:hover,
+  .concepto__item:hover,
+  .diseno__shot:hover,
+  .solucion__photo:hover,
+  .wireframe__art:hover,
+  .hifi__art:hover,
+  .cta__monitor:hover,
+  .mercado__house:hover,
+  .plan__phone:hover {
+    transform: scale(1.02);
+  }
+
+  /* Scale the image, not .ds__art — it uses translateX(-50%) for centering */
+  .ds__art img {
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .ds__art:hover img {
+    transform: scale(1.02);
+  }
+
+  img.diseno__card {
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.4s ease;
+  }
+
+  img.diseno__card:hover {
+    transform: scale(1.02);
+    filter: saturate(1.08);
+  }
+
+  /* Soft parallax host for case-study heroes */
+  .hero[data-parallax] .hero__art img {
+    transition: transform 0.45s ease-out;
+    will-change: transform;
+  }
+
+  /* Spoiler idle hint */
+  .spoiler:not(.is-open) .spoiler__chevron {
+    animation: spoiler-nudge 2.4s ease-in-out infinite;
+  }
+
+  @keyframes spoiler-nudge {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(3px);
+    }
+  }
+
+  .spoiler.is-open .spoiler__chevron {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .spoiler:not(.is-open) .spoiler__chevron {
+    animation: none;
+  }
+
+  .scroll-glass {
+    transition: none;
+  }
+}
+
+/* Horse — cursor paints darker X’s (no special cursor) */
+.hero__horse {
+  pointer-events: auto;
+}
+
+.hero__horse-base,
+.hero__horse-ink,
+.hero__horse-shine {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero__horse-ink,
+.hero__horse-shine {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero__horse-ink {
+  filter: brightness(0.42);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  -webkit-mask-image: radial-gradient(
+    circle var(--horse-r, 48px) at var(--horse-x, 50%) var(--horse-y, 50%),
+    #000 0%,
+    #000 35%,
+    transparent 72%
+  );
+  mask-image: radial-gradient(
+    circle var(--horse-r, 48px) at var(--horse-x, 50%) var(--horse-y, 50%),
+    #000 0%,
+    #000 35%,
+    transparent 72%
+  );
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.hero__horse.is-painting .hero__horse-ink {
+  opacity: 1;
+}
+
+/* Idle shine wave — same language as loader, gentle cadence */
+.hero__horse-shine {
+  filter: brightness(0.45);
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 35%,
+    #000 65%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 35%,
+    #000 65%,
+    transparent 100%
+  );
+  -webkit-mask-size: 55% 100%;
+  mask-size: 55% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: -60% 0;
+  mask-position: -60% 0;
+  animation: horse-idle-shine 6.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: 1.6s;
+}
+
+.hero__horse.is-painting .hero__horse-shine,
+.hero__horse.is-awaiting-loader .hero__horse-shine {
+  animation: none;
+  opacity: 0;
+}
+
+@keyframes horse-idle-shine {
+  0%,
+  8% {
+    opacity: 0;
+    -webkit-mask-position: -60% 0;
+    mask-position: -60% 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 1;
+  }
+  28%,
+  100% {
+    opacity: 0;
+    -webkit-mask-position: 160% 0;
+    mask-position: 160% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__horse-shine {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}
+
+/* ----- Back to top (case studies) ----- */
+.back-top {
+  position: fixed;
+  right: clamp(16px, 3vw, 28px);
+  bottom: clamp(16px, 3vw, 28px);
+  left: auto;
+  z-index: 980;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: -2px 4px 18px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease,
+    background-color 0.22s ease;
+}
+
+@media (min-width: 1440px) {
+  .back-top {
+    right: 56px;
+    bottom: 56px;
+  }
+}
+
+.back-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-top svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.back-top:hover {
+  background: #222;
+}
+
+.back-top:active {
+  background: #111;
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-top {
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    transform: none;
+  }
+
+  .back-top.is-visible,
+  .back-top:active {
+    transform: none;
+  }
+}
+
+@media (hover: none) {
+  .hero__horse-ink {
+    display: none;
+  }
+
+  .cursor-dot,
+  .scroll-glass {
+    display: none;
+  }
+}

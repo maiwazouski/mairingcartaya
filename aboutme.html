@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sobre mí — Mairing Cartaya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/nav.css" />
+    <link rel="stylesheet" href="assets/css/aboutme.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/interactions.css" />
+  </head>
+  <body>
+    <div class="nav-bar" data-nav-bar>
+      <header class="nav" data-nav>
+        <a class="brand" href="index.html">
+          <div class="avatar">
+            <img src="assets/home/avatar.png" alt="Mairing Cartaya" />
+          </div>
+          <span class="brand__name">Mairing Cartaya</span>
+        </a>
+        <nav class="nav__links" id="site-nav-links">
+          <a href="aboutme.html">Sobre mí</a>
+          <a
+            href="https://drive.google.com/file/d/1RkU3glULbgyG2rh3CZnER4O4JSRLOr63/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CV</a
+          >
+        </nav>
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-controls="site-nav-links"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="nav__toggle-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </header>
+    </div>
+
+    <div class="canvas">
+      <section class="intro">
+        <h1>Hola, soy Mai</h1>
+        <p>
+          Estudio <strong>Diseño en Interacción Digital</strong> en la
+          Universidad Gabriela Mistral en Santiago, Chile. Me apasiona investigar
+          y conceptualizar soluciones para problemas complejos, transformando
+          información e ideas en experiencias digitales significativas.
+        </p>
+        <p>
+          <a
+            class="practice"
+            href="mailto:mairingcartaya@gmail.com"
+            data-practice
+          >
+            <span class="practice__tip"
+              ><span class="practice__tip-icon" aria-hidden="true">✉</span>
+              Enviar un correo a Mai</span
+            >
+            <span class="practice__label">
+              <span class="practice__base"
+                >Actualmente busco práctica profesional en UX/UI</span
+              >
+              <span class="practice__shine" aria-hidden="true"
+                >Actualmente busco práctica profesional en UX/UI</span
+              >
+            </span>
+          </a>, con especial interés en Research y Design Systems. Quiero
+          aprender de profesionales con experiencia, asumir desafíos y seguir
+          creciendo para alcanzar la excelencia y crear experiencias
+          significativas.
+        </p>
+
+        <div class="about-acc" data-about-acc>
+          <div class="about-acc__item">
+            <button
+              type="button"
+              class="about-acc__trigger"
+              aria-expanded="false"
+              aria-controls="about-acc-filosofia"
+              id="about-acc-filosofia-btn"
+            >
+              <span class="about-acc__title">Filosofía de diseño</span>
+              <span class="about-acc__icon" aria-hidden="true">
+                <span class="about-acc__bar about-acc__bar--h"></span>
+                <span class="about-acc__bar about-acc__bar--v"></span>
+              </span>
+            </button>
+            <div
+              class="about-acc__panel"
+              id="about-acc-filosofia"
+              role="region"
+              aria-labelledby="about-acc-filosofia-btn"
+              hidden
+            >
+              <div class="about-acc__panel-inner">
+                <p>
+                  Creo en el valor del diseño y en su capacidad de influir en cómo
+                  las personas entienden, usan y experimentan el mundo. Por eso
+                  quiero ejercerlo con disciplina, curiosidad y rigor,
+                  entendiendo que un buen resultado nace tanto de una buena idea
+                  como de las condiciones para desarrollarla. También creo que el
+                  diseño se desarrolla mejor cuando existe colaboración,
+                  claridad y respeto por el trabajo de quienes lo
+                  hacen.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-acc__item">
+            <button
+              type="button"
+              class="about-acc__trigger"
+              aria-expanded="false"
+              aria-controls="about-acc-trabajo"
+              id="about-acc-trabajo-btn"
+            >
+              <span class="about-acc__title">Cómo trabajo</span>
+              <span class="about-acc__icon" aria-hidden="true">
+                <span class="about-acc__bar about-acc__bar--h"></span>
+                <span class="about-acc__bar about-acc__bar--v"></span>
+              </span>
+            </button>
+            <div
+              class="about-acc__panel"
+              id="about-acc-trabajo"
+              role="region"
+              aria-labelledby="about-acc-trabajo-btn"
+              hidden
+            >
+              <div class="about-acc__panel-inner">
+                <p>
+                  Me involucro profundamente en lo que hago y busco llevar cada
+                  proyecto tan lejos como pueda. Me gusta entender antes de
+                  resolver: investigo, organizo información y busco conexiones
+                  que permitan tomar mejores decisiones de diseño. También soy
+                  organizada y disfruto del trabajo en equipo cuando existe una
+                  meta común.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-acc__item">
+            <button
+              type="button"
+              class="about-acc__trigger"
+              aria-expanded="false"
+              aria-controls="about-acc-fuera"
+              id="about-acc-fuera-btn"
+            >
+              <span class="about-acc__title">Tiempo libre</span>
+              <span class="about-acc__icon" aria-hidden="true">
+                <span class="about-acc__bar about-acc__bar--h"></span>
+                <span class="about-acc__bar about-acc__bar--v"></span>
+              </span>
+            </button>
+            <div
+              class="about-acc__panel"
+              id="about-acc-fuera"
+              role="region"
+              aria-labelledby="about-acc-fuera-btn"
+              hidden
+            >
+              <div class="about-acc__panel-inner">
+                <p>
+                  Fuera del diseño, suelo estructurar mis proyectos, ideas, metas
+                  y aprendizajes, y estudio por mi
+                  cuenta aquello que despierta mi curiosidad. También
+                  disfruto descubrir, guardar y clasificar inspiración, y fuera
+                  de la pantalla me encontrarás compartiendo con mis gatos,
+                  meditando o entrenando judo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="photos" data-photos aria-label="Fotos personales, puedes arrastrarlas">
+        <div class="photo photo--cat-back">
+          <img src="assets/aboutme/cat-gray.png" alt="" />
+        </div>
+        <div class="photo photo--cat-front">
+          <img src="assets/aboutme/cat-orange.png" alt="" />
+        </div>
+        <div class="photo photo--lake">
+          <img src="assets/aboutme/lake.png" alt="" />
+        </div>
+        <div class="photo photo--portrait">
+          <img src="assets/aboutme/portrait.png" alt="" />
+        </div>
+        <div class="photo photo--judo">
+          <img src="assets/aboutme/judo.png" alt="" />
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="brand">
+          <div class="avatar">
+            <img src="assets/home/avatar.png" alt="Mairing Cartaya" width="38" height="67" />
+          </div>
+          <span class="brand__name">Mairing Cartaya</span>
+        </div>
+        <div class="footer__meta">
+          <nav class="footer__links">
+            <a href="mailto:mairingcartaya@gmail.com">Correo</a>
+            <a
+              href="https://www.linkedin.com/in/mairingcartaya"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              href="https://drive.google.com/file/d/1s6m0h0pcNCh3qWUvDZNTcPQAH2hjETt2/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Portafolio PDF</a
+            >
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/interactions.js"></script>
+    <script src="assets/js/aboutme-acc.js"></script>
+    <script src="assets/js/aboutme-photos.js"></script>
+  </body>
+</html>

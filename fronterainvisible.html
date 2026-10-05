@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frontera Invisible — Mairing Cartaya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/nav.css" />
+    <link rel="stylesheet" href="assets/css/fronterainvisible.css?v=t3" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/interactions.css" />
+  </head>
+  <body>
+    <div class="nav-bar" data-nav-bar>
+      <header class="nav" data-nav>
+        <a class="brand" href="index.html">
+          <div class="avatar">
+            <img src="assets/home/avatar.png" alt="Mairing Cartaya" />
+          </div>
+          <span class="brand__name">Mairing Cartaya</span>
+        </a>
+        <nav class="nav__links" id="site-nav-links">
+          <a href="aboutme.html">Sobre mí</a>
+          <a
+            href="https://drive.google.com/file/d/1RkU3glULbgyG2rh3CZnER4O4JSRLOr63/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CV</a
+          >
+        </nav>
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-controls="site-nav-links"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="nav__toggle-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </header>
+    </div>
+
+    <div class="canvas">
+      <section class="hero">
+        <div class="hero__art">
+          <img
+            src="assets/fronterainvisible/hero.png"
+            alt=""
+            width="1028"
+            height="579"
+          />
+        </div>
+        <h1 class="hero__title">Frontera Invisible</h1>
+        <a class="hero__cta" href="#meta">
+          Ver más
+          <img
+            src="assets/fronterainvisible/arrow.svg"
+            alt=""
+            width="10"
+            height="10"
+          />
+        </a>
+      </section>
+
+      <section class="meta" id="meta">
+        <div class="meta__row">
+          <div class="meta__item">
+            <h3>Tipo de proyecto:</h3>
+            <p>Individual</p>
+          </div>
+          <div class="meta__item">
+            <h3>Categoría:</h3>
+            <p>Documental web interactivo</p>
+          </div>
+          <div class="meta__item">
+            <h3>Herramientas:</h3>
+            <p>Illustrator, HTML/CSS/JavaScript,<br />p5.js, Visual Studio Code</p>
+          </div>
+          <div class="meta__item">
+            <h3>Duración:</h3>
+            <p>4 meses</p>
+          </div>
+          <div class="meta__item">
+            <h3>Skills:</h3>
+            <p>
+              Investigación académica<br />
+              Conceptualización interactiva<br />
+              Desarrollo en código
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="resumen" id="resumen">
+        <div class="resumen__media">
+          <img
+            src="assets/fronterainvisible/resumen.png"
+            alt="Persona frente a un computador con banderas de Chile y Venezuela"
+            width="848"
+            height="477"
+          />
+        </div>
+        <div class="resumen__copy">
+          <h2>Resumen</h2>
+          <div class="resumen__row resumen__row--encargo">
+            <img
+              src="assets/fronterainvisible/icon-encargo.png"
+              alt=""
+              width="20"
+              height="20"
+            />
+            <p>
+              <strong>Encargo:</strong> desarrollar un documental web sobre un
+              tema social.
+            </p>
+          </div>
+          <div class="resumen__row resumen__row--decision">
+            <img
+              src="assets/fronterainvisible/icon-decision.png"
+              alt=""
+              width="20"
+              height="20"
+            />
+            <p>
+              <strong>Decisión clave:</strong> traducir cada causa en una
+              mecánica de interacción distinta, iterando cuando el concepto
+              inicial no funcionaba en código.
+            </p>
+          </div>
+          <div class="resumen__row resumen__row--resultado">
+            <img
+              src="assets/fronterainvisible/icon-resultado.png"
+              alt=""
+              width="20"
+              height="19"
+            />
+            <p>
+              <strong>Resultado:</strong> Frontera invisible es un documental
+              web que usa el diseño y el código como herramientas de disección
+              social.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contexto">
+        <h2>Contexto</h2>
+        <p class="contexto__lead">
+          4 secciones -&gt; buscan generar reflexión frente a una crisis
+          humanitaria:
+          <strong
+            >¿Cuáles son las causas más relevantes de la xenofobia hacia
+            inmigrantes venezolanos en Chile?</strong
+          >
+        </p>
+        <div class="contexto__tags">
+          <img
+            src="assets/fronterainvisible/contexto-tags.png"
+            alt="Irregularidad forzada, Privilegio, La otredad, Chivo expiatorio"
+            width="607"
+            height="72"
+          />
+        </div>
+        <article class="cause cause--1">
+          <span class="cause__num">01</span>
+          <p class="cause__text">
+            <strong>Irregularidad forzada:</strong> una política migratoria
+            restrictiva que empuja a la marginalidad en vez de integrar, creando
+            un escenario para la estigmatización.
+          </p>
+        </article>
+        <article class="cause cause--2">
+          <span class="cause__num">02</span>
+          <p class="cause__text">
+            <strong>Privilegio local:</strong> el juicio hacia el migrante desde
+            la comodidad de instituciones que funcionan, sin reconocer que hay
+            conductas como consecuencia de la supervivencia.
+          </p>
+        </article>
+        <article class="cause cause--3">
+          <span class="cause__num">03</span>
+          <p class="cause__text">
+            <strong>Chivo expiatorio:</strong> el uso mediático y político del
+            migrante para desviar la atención de fallas estructurales internas,
+            alimentado por una economía de la atención.
+          </p>
+        </article>
+        <article class="cause cause--4">
+          <span class="cause__num">04</span>
+          <p class="cause__text">
+            <strong>La otredad:</strong> un patrón histórico de construir
+            identidad por exclusión, rechazando al migrante caribeño como
+            amenaza a la autoimagen de orden.
+          </p>
+        </article>
+      </section>
+
+      <section class="concepto">
+        <h2>Concepto</h2>
+        <p class="concepto__lead">
+          Usé la conceptualización como recurso comunicativo, expresado a través
+          del diseño y la experiencia de usuario. Cada sección incluye acceso a
+          las fuentes citadas.
+        </p>
+        <article class="concepto__item concepto__item--1">
+          <img
+            src="assets/fronterainvisible/concepto-irregularidad.png"
+            alt="Irregularidad forzada: bloques de leyes sobre bases inestables"
+            width="588"
+            height="351"
+          />
+          <p>
+            Las leyes activan bloques que caen sobre bases inestables hasta
+            colapsar, remitiendo al funcionamiento de la política excluyente.
+          </p>
+        </article>
+        <article class="concepto__item concepto__item--2">
+          <img
+            src="assets/fronterainvisible/concepto-otredad.png"
+            alt="La otredad: pantalla negra que se revela al rociar"
+            width="585"
+            height="350"
+          />
+          <p>
+            Una pantalla negra que el usuario "rocía" manteniendo el click,
+            revelando lo que la sociedad prefiere censurar de sí misma.
+          </p>
+        </article>
+        <article class="concepto__item concepto__item--3">
+          <img
+            src="assets/fronterainvisible/concepto-chivo.png"
+            alt="Chivo expiatorio: mira vigilante sobre el cursor"
+            width="587"
+            height="358"
+          />
+          <p>
+            Una mira vigilante persigue el cursor y emite alertas, simulando la
+            hipervigilancia mediática y el miedo a ser señalado.
+          </p>
+        </article>
+        <article class="concepto__item concepto__item--4">
+          <img
+            src="assets/fronterainvisible/concepto-privilegio.png"
+            alt="Privilegio local: muro de ladrillos y preguntas de autocrítica"
+            width="586"
+            height="350"
+          />
+          <p>
+            El usuario se enfrenta a preguntas de autocrítica que derriban los
+            ladrillos de un muro que representa sus posibles sesgos.
+          </p>
+        </article>
+      </section>
+
+      <section class="diseno">
+        <h2>Diseño e iteraciones</h2>
+        <p class="diseno__lead">
+          Ninguna mecánica se mantuvo fiel a la idea original, todas se
+          rediseñaron en código. La más compleja fue "irregularidad forzada", ya
+          que necesitaba que los bloques cayeran de forma natural, y fue mi
+          mentor quien me mostró las librerías de física de p5.js.
+        </p>
+        <div class="diseno__shot diseno__shot--1">
+          <img
+            src="assets/fronterainvisible/iter-1.png"
+            alt="Iteración de física de bloques en irregularidad forzada"
+            width="731"
+            height="286"
+          />
+        </div>
+        <div class="diseno__shot diseno__shot--2">
+          <img
+            src="assets/fronterainvisible/iter-2.png"
+            alt="Iteración de la pantalla de otredad"
+            width="418"
+            height="317"
+          />
+        </div>
+        <div class="diseno__shot diseno__shot--3">
+          <img
+            src="assets/fronterainvisible/iter-3.png"
+            alt="Iteración de la mira de chivo expiatorio"
+            width="724"
+            height="347"
+          />
+        </div>
+        <div class="diseno__shot diseno__shot--4">
+          <img
+            src="assets/fronterainvisible/iter-4.png"
+            alt="Iteración del muro de privilegio local"
+            width="418"
+            height="319"
+          />
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="cta__monitor">
+          <img
+            src="assets/fronterainvisible/cta-monitor.png"
+            alt="Monitor con banderas de Chile y Venezuela"
+            width="1197"
+            height="983"
+          />
+        </div>
+        <h2 class="cta__title">Explora el documental</h2>
+        <a
+          class="cta__btn"
+          href="https://mairingcartaya.github.io/fronterainvisible/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Quiero verlo</a
+        >
+        <p class="cta__note">
+          <span
+            >Este proyecto fue seleccionado para exposición en el Processing Day
+            2026</span
+          >
+        </p>
+      </section>
+
+      <footer class="footer">
+        <div class="brand">
+          <div class="avatar">
+            <img src="assets/home/avatar.png" alt="Mairing Cartaya" width="38" height="67" />
+          </div>
+          <span class="brand__name">Mairing Cartaya</span>
+        </div>
+        <div class="footer__meta">
+          <nav class="footer__links">
+            <a href="mailto:mairingcartaya@gmail.com">Correo</a>
+            <a
+              href="https://www.linkedin.com/in/mairingcartaya"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              href="https://drive.google.com/file/d/1s6m0h0pcNCh3qWUvDZNTcPQAH2hjETt2/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Portafolio PDF</a
+            >
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/interactions.js"></script>
+  </body>
+</html>

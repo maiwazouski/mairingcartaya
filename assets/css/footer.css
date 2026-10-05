@@ -1,0 +1,184 @@
+/* Shared site footer — used by all pages */
+
+.footer {
+  width: min(calc(100% - 48px), 1196px);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-sizing: border-box;
+}
+
+.page > .footer,
+.canvas > .footer {
+  margin-top: 150px;
+}
+
+.footer .brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer .brand__name {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.72px;
+  line-height: 1.3;
+}
+
+.footer .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.footer .avatar img {
+  width: 37.795px;
+  height: 67.155px;
+  margin-top: -3.72px;
+  display: block;
+  max-width: none;
+}
+
+.footer__meta {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer__social a {
+  width: 24px;
+  height: 24px;
+  display: block;
+  overflow: hidden;
+}
+
+.footer__social img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  object-fit: cover;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: 74px;
+}
+
+.footer__links a {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+  line-height: 24px;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Desktop artboard: keep absolute placement; page CSS offsets top for the 150px gap */
+@media (min-width: 1440px) {
+  .canvas > .footer {
+    margin-top: 0;
+  }
+}
+
+/* Flow layouts below artboard width */
+@media (max-width: 1439px) {
+  .canvas > .footer {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(calc(100% - 48px), 1196px);
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 28px;
+    width: min(calc(100% - 40px), 710px);
+  }
+
+  .footer .brand {
+    justify-content: center;
+  }
+
+  .footer__meta {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .footer__social {
+    justify-content: center;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    width: calc(100% - 32px);
+    margin-top: 150px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .footer .brand {
+    justify-content: center;
+  }
+
+  .footer .brand__name {
+    font-size: 20px;
+  }
+
+  .footer__meta {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .footer__social {
+    justify-content: center;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .footer__links a {
+    font-size: 16px;
+  }
+}
